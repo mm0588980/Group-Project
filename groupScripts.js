@@ -29,3 +29,12 @@ function submitInfo() {
 }
 document.getElementById("submit").addEventListener("click", submitInfo, false);
 calcTotal();
+
+var cartAry = [["Plumbus", 6.5], ["Portal Gun", 1000], ["Portal Gun", 1000], ["Interdimensional Cable Box", 200]];
+function printCart() {
+  for (cell = 0, i = 0; cell < 8; cell += 2, i++) {
+    document.getElementsByTagName("td")[cell].innerHTML = cartAry[i][0];
+    document.getElementsByTagName("td")[cell + 1].innerHTML = cartAry[i][1];
+  }
+}
+window.addEventListener("load", printCart, false);
